@@ -1,3 +1,0 @@
-# StudentLegalAdvise
-
-Mijn echte website
