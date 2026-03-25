@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Legal</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #1e293b, #020617);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* BACKGROUND GLOW */
+body::before {
+    content: "";
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background: #5865F2;
+    filter: blur(120px);
+    top: -200px;
+    left: -200px;
+    opacity: 0.3;
+    animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(40px); }
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    animation: fadeDown 1s ease;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.discord-btn {
+    background: #5865F2;
+    padding: 10px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.discord-btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 0 20px #5865F2;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    animation: fadeUp 1.2s ease;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #fff, #a5b4fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    opacity: 0.7;
+    font-size: 18px;
+}
+
+/* TAGS */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 50px;
+}
+
+.tag {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 12px 18px;
+    border-radius: 999px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+    cursor: pointer;
+    animation: fadeUp 1.5s ease;
+}
+
+.tag:hover {
+    transform: translateY(-5px) scale(1.08);
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+
+/* CARD */
+.card {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 40px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    animation: fadeUp 2s ease;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    opacity: 0.7;
+    margin-bottom: 25px;
+}
+
+/* BUTTON */
+.main-btn {
+    background: #5865F2;
+    border: none;
+    padding: 16px 30px;
+    border-radius: 12px;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px #5865F2;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    opacity: 0.4;
+    animation: fadeUp 2.5s ease;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Student Legal</div>
+    <a href="https://discord.gg/mkUMtgNBN4" class="discord-btn" target="_blank">Discord</a>
+</nav>
+
+<section class="hero">
+    <h1>Stel je schoolvragen</h1>
+    <p>Snelle hulp bij problemen op school</p>
+
+    <div class="tags">
+        <div class="tag">Examens & Punten</div>
+        <div class="tag">Privacy</div>
+        <div class="tag">Welzijn</div>
+        <div class="tag">Pesten</div>
+        <div class="tag">Klachtenprocedure</div>
+        <div class="tag">Leerlingendossier</div>
+        <div class="tag">Afwezigheden</div>
+        <div class="tag">Te Laat</div>
+        <div class="tag">Technologie Gebruik</div>
+    </div>
+</section>
+
+<div class="card">
+    <h2>Heb je een probleem?</h2>
+    <p>Ga direct naar Discord en stel je vraag.</p>
+
+    <a href="https://discord.gg/mkUMtgNBN4" target="_blank">
+        <button class="main-btn">Stel je vraag</button>
+    </a>
+</div>
+
+<footer>
+    ⚠️ Wij zijn geen advocaten. Wij proberen je gewoon te helpen 
+</footer>
+
+</body>
+</html>
